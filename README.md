@@ -4,6 +4,8 @@ Cloning the landing page design from [here](https://99designs.com/blog/creative-
 
 ## To Do
 - [] Clone the Website (Pure HTML, CSS and Vanilla JS)
+    - [] Add webpack
 - [] Personalize the website
 - [] Convert into ReactJS
 - [] Add in some database
+- [] Integrate unit testing
