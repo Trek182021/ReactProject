@@ -17,7 +17,7 @@ module.exports = {
                 exclude: /node_modules/, //files to ignore
                 use: {
                     loader: "babel-loader", // specify the loader
-                }
+                },
             }
         ]
     }
