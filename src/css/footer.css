@@ -12,7 +12,7 @@
 }
 
 .footer {
-    background: url('./images/footer-img.png') no-repeat center center / cover;
+    background: url('../assets/images/footer-img.png') no-repeat center center / cover;
     position: relative;
     width: 100vw;
     /* height: 80vh; */
