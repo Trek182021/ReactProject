@@ -88,6 +88,23 @@
 
 .top-header__questions {
     /* align-self: flex-end; */
+    align-items: center;
+    display: flex;
+}
+
+.top-header__questions--icon {
+    border: #f6d306 1px solid;
+    border-radius: 2px;
+    width: 35px;
+    height: 35px;
+    transform: rotate(-45deg);
+    margin-right: 20px;
+    
+}
+
+.top-header__questions--img {
+    padding: 5px;
+    
 }
 
 .top-header__questions--text {
@@ -97,6 +114,7 @@
 .top-header__questions--phonenumber {
     font-weight: 600;
     font-size: 2rem;
+    margin-top: -10px;
 }
 
 /* .top-header--col {
