@@ -19,8 +19,8 @@
     background: url('../assets/images/header-img.jpg') no-repeat center center / cover;
     position: relative;
     width: 100vw;
-    height: 70vh;
-    z-index: -1;
+    /* height: 70vh; */
+    z-index: 1;
 }
 
 .header::before {
@@ -48,7 +48,7 @@
 .top-header {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -59,10 +59,11 @@
     width: 100%;
 } */
 
-.top-header__logo {
+.top-header__nav {
     display: flex;
     justify-content: start;
     align-items: center;
+    align-self: start;
 }
 
 .top-header__logo--icon {
@@ -80,14 +81,45 @@
     border-left: 2px solid #ddd;
 }
 
+.top-header__logo--text,
 .top-header__about,
 .top-header__blog {
+    text-decoration: none;
+    color: #fff;
+}
+
+.top-header__about {
     font-weight: bold;
-    /* align-items: flex-start; */
+    border-right: 1px solid #d5d5d5;
+    padding-right: 25px;
+    margin-left: 60px;
+    color: var(--yellow-color);
+}
+
+.top-header__blog {
+    font-weight: bold;
+    margin-left: 25px;
 }
 
 .top-header__questions {
     /* align-self: flex-end; */
+    align-items: center;
+    display: flex;
+}
+
+.top-header__questions--icon {
+    border: #f6d306 1px solid;
+    border-radius: 2px;
+    width: 35px;
+    height: 35px;
+    transform: rotate(-45deg);
+    margin-right: 20px;
+    
+}
+
+.top-header__questions--img {
+    padding: 5px;
+    
 }
 
 .top-header__questions--text {
@@ -97,6 +129,7 @@
 .top-header__questions--phonenumber {
     font-weight: 600;
     font-size: 2rem;
+    margin-top: -10px;
 }
 
 /* .top-header--col {
@@ -120,11 +153,6 @@
     padding: 100px;
 }
 
-.bottom-header__left {
-
-}
-
-
 .bottom-header__headline {
     margin: 40px 125px 40px 0;
 }
@@ -147,6 +175,7 @@
     -mask-position: center;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
+    -webkit-mask-image: url(../assets/images/down-arrow.svg);
     mask-image: url("../assets/images/down-arrow.svg");
     margin-top: 75px;
 }
@@ -158,6 +187,10 @@
     align-items: center;
     width: 100%;
     padding: 50px;
+}
+
+.header-form form {
+    width: 100%;
 }
 
 .header-form--title {
@@ -173,13 +206,14 @@
     padding: 15px;
     border: 1px solid #ddd;
     margin-bottom: 6px;
+    width: 100%;
 }
 
-.header-form input[id=message] {
+.header-form input[id="message"] {
     padding: 10px 15px 25px 15px;
 }
 
-.header-form input[type=submit] {
+.header-form input[type="submit"] {
     background-color: #000;
     color: #fff;
     border: none;
@@ -190,4 +224,9 @@
     font-weight: 600;
     padding: 12px 10px;
     margin-top: 5px;
+}
+
+.header-form input[type="submit"]:hover {
+    background-color: #fff;
+    color: #000;
 }
