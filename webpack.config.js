@@ -12,7 +12,7 @@ module.exports = {
         filename: "index.js",
         path: path.resolve(__dirname, "dist"),
         publicPath: "./",
-        assetModuleFilename: "images/[name][ext][query]",
+        assetModuleFilename: "assets/images/[name][ext][query]",
     },
 
     module: {
@@ -31,18 +31,57 @@ module.exports = {
                 use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
             },
             // images into ./dist
+            // {
+            //     test: /\.(png|jp(e*)g|svg)$/,
+            //     use: [
+            //         {
+            //             loader: "url-loader",
+            //             options: {
+            //                 limit: false,
+            //                 fallback: "file-loader",
+            //                 name: "assets/images/[name].[ext]"
+            //             },
+            //         },
+            //     ],
+            // },
+            // {
+            //     test: /\.(png|jp(e*)g|svg)$/,
+            //     use: [
+            //         {
+            //             loader: "file-loader",
+            //             options: {
+            //                 outputPath: 'assets/images',
+            //                 name: '[name].[ext]'
+            //             },
+            //         },
+            //     ],
+            // },
+            // images into ./dist
             {
-                test: /\.(png|jp(e*)g|svg)$/,
+                test: /\.(png|jp(e*)g|svg)$/i,
                 use: [
                     {
                         loader: "url-loader",
                         options: {
-                            limit: 8000,//Convert images < 8kb to base64 strings
-                            name: "images/[hash]-[name].[ext]",
+                            limit: 8000,
+                            name: "assets/images/[name].[ext]"
                         },
                     },
                 ],
             },
+           
+            // {
+            //     test: /\.svg$/,
+            //     use: [
+            //         {
+            //             loader: "svg-url-loader",
+            //             options: {
+            //                 limit: 100000,
+            //                 name: "assets/images/[name].[ext]"
+            //             },
+            //         },
+            //     ],
+            // },
         ],
     },
     // minify CSS
