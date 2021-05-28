@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     entry: "./src/index.js",
@@ -109,5 +110,14 @@ module.exports = {
         }),
         new CleanWebpackPlugin(),
         new webpack.HotModuleReplacementPlugin(),
+        new CopyPlugin({
+            patterns: [
+                {
+                    context: "./src",
+                    from: "assets/images/*.svg",
+                   // to: "assets/images/" // not needed
+                }
+            ],
+        }),
     ],
 };
